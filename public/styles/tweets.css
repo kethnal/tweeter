@@ -1,0 +1,13 @@
+.some-tweet {
+}
+
+.some-tweet header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.some-tweet footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
