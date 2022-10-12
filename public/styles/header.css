@@ -1,0 +1,23 @@
+.current-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #FFFFFF;
+  background-color: darkorange;
+  background-image: url("../images/cubes.png");
+  height: 520px;
+  width: 100%;
+}
+
+.user-title {
+  margin: 0px;
+  font-size: 50px;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
