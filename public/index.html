@@ -6,24 +6,86 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/e21136580c.js" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span id="name">tweeter</span>
+      <div class="tweet-header">
+        <p class="write"><strong>Write</strong> a new tweet</p>
+        <i class="fa-solid fa-angles-down fa-bounce"></i>
+      </div>
     </nav>
 
+    <header class="current-user">
+      <div class="user">
+          <img src="/images/profile-hex.png"> 
+        <br>
+          <p class="user-title"><strong>Chronically</strong> Online</p>
+      </div>  
+    </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+
+      <section class="new-tweet">
+        <form  method="POST" action="/tweets/">
+
+          <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
+      
+          <footer class="below-border">
+            <button type="submit" class="send-tweet">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </footer>
+
+        </form>
+      </section>
+
+      <section>
+        <article class="some-tweet">
+
+          <header>
+            <p>some icon</p>
+            <p>@handle</p>
+          </header>
+
+          <p>this is a quirky relatable tweet about something that happened at panera bread</p>
+          <hr class="solid">
+
+          <footer>
+            <p>2 hours ago</p>
+            <div>
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </footer>
+
+        </article>
+      </section>
+
+    </main>
   </body>
 </html>
