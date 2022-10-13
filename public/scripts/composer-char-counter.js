@@ -6,9 +6,9 @@ $(document).ready(function() {
     const $target = $(this).next().children().last();
 
     if (totalChar < 0) {
-      $target.addClass('counter-over');
+      $target.addClass('error');
     } else {
-      $target.removeClass('counter-over');
+      $target.removeClass('error');
     }
 
     $target.text(totalChar);

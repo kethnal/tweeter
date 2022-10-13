@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -35,10 +36,11 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span id="name">tweeter</span>
-      <div class="tweet-header">
+      <div id="tweet-header">
         <p class="write"><strong>Write</strong> a new tweet</p>
         <i class="fa-solid fa-angles-down fa-bounce"></i>
       </div>
+      <div id="smartphone"><i class="fa-solid fa-circle-plus fa-beat"></i></div>
     </nav>
 
     <header class="current-user">
@@ -52,6 +54,10 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
+      <p class="error" id="empty">Humming about nothing? I don't think so.</p>
+      <p class="error" id="length">No one wants to read all that...</p>
+
+
       <section class="new-tweet">
         <form id="tweet-input">
 
@@ -59,12 +65,13 @@
       
           <footer class="below-border">
             <button type="submit" class="send-tweet">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <output name="counter" class="counter" for="humming">140</output>
           </footer>
 
         </form>
+
       </section>
-      
+
       <section id="tweet-container">
       </section>
 

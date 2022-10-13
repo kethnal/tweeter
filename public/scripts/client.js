@@ -5,35 +5,37 @@
  */
 
 $(document).ready(function() {
-  
+
+  $('.error').hide();
+
   const createTweetElement = function(tweet) {
   
     const user = tweet.user;
   
-    let tempVars = {
-      name: user.name,
-      avatar: user.avatars,
-      handle: user.handle,
-      content: tweet.content.text,
-      time: tweet.created_at
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
     };
   
+    const safeHTML = `<p>${escape(tweet.content.text)}</p>`;
+
     const $tweet = $(`
     <article>
   
       <header>
         <div id="avatar">
-          <img src="${tempVars.avatar}">
-          <p>${tempVars.name}</p>
+          <img src="${user.avatars}">
+          <p>${user.name}</p>
         </div>
-        <p>${tempVars.handle}</p>
+        <p>${user.handle}</p>
       </header>
   
-      <div id="tweet-text">${tempVars.content}</div>
+      <div id="tweet-text">${safeHTML}</div>
       <hr class="solid">
   
       <footer>
-        <p>${timeago.format(tempVars.time)}</p>
+        <p>${timeago.format(tweet.created_at)}</p>
         <div id="icons">
           <div class="icon"><i class="fa-solid fa-flag"></i></div>
           <div class="icon"><i class="fa-solid fa-retweet"></i></div>
@@ -49,23 +51,20 @@ $(document).ready(function() {
   
   
   const renderTweets = function(tweets) {
-  
     for (let tweet of tweets) {
       let newTweet = createTweetElement(tweet);
       $('#tweet-container').prepend(newTweet);
     }
-  
   };
 
 
   const loadTweets = function() {
-
     $.ajax({
       method: 'GET',
       url: '/tweets',
     }).then(renderTweets);
-
   };
+
 
   loadTweets();
 
@@ -75,12 +74,13 @@ $(document).ready(function() {
 
     const $dataToSendToServer = $(this).serialize();
     let $input = $(this).children().first().val();
+    $('.error').slideUp();
 
     if ($input.length > 140) {
-      return alert("No one wants to read all that...");
+      return $('#length').slideDown();
     }
     if ($input.length === 0) {
-      return alert("Humming about nothing? I don't think so.");
+      return $('#empty').slideDown();
     }
 
     $.ajax({
@@ -89,7 +89,9 @@ $(document).ready(function() {
       data: $dataToSendToServer
     }).then(loadTweets);
 
+    console.log()
     this.reset();
   });
   
+
 });
