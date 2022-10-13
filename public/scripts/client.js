@@ -29,11 +29,11 @@ $(document).ready(function() {
         <p>${tempVars.handle}</p>
       </header>
   
-      <p id="tweet-text">${tempVars.content}</p>
+      <div id="tweet-text">${tempVars.content}</div>
       <hr class="solid">
   
       <footer>
-        <p>${tempVars.time}</p>
+        <p>${timeago.format(tempVars.time)}</p>
         <div id="icons">
           <div class="icon"><i class="fa-solid fa-flag"></i></div>
           <div class="icon"><i class="fa-solid fa-retweet"></i></div>
@@ -58,22 +58,6 @@ $(document).ready(function() {
   };
 
 
-  $('form').on('submit', (event) => {
-    event.preventDefault();
-    
-    console.log("form submitted");
-
-    const dataToSendToServer = $("form").serialize();
-    console.log(dataToSendToServer);
-
-    $.ajax({
-      method: 'POST',
-      url: '/tweets',
-      data: dataToSendToServer
-    });
-  });
-
-
   const loadTweets = function() {
 
     $.ajax({
@@ -85,4 +69,27 @@ $(document).ready(function() {
 
   loadTweets();
 
+
+  $('#tweet-input').on('submit', function(event) {
+    event.preventDefault();
+
+    const $dataToSendToServer = $(this).serialize();
+    let $input = $(this).children().first().val();
+
+    if ($input.length > 140) {
+      return alert("No one wants to read all that...");
+    }
+    if ($input.length === 0) {
+      return alert("Humming about nothing? I don't think so.");
+    }
+
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: $dataToSendToServer
+    }).then(loadTweets);
+
+    this.reset();
+  });
+  
 });

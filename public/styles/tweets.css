@@ -1,3 +1,7 @@
+#tweet-container {
+  width: 80%;
+}
+
 article {
   border: 4px solid;
   padding: 20px;
@@ -10,19 +14,25 @@ article header p {
 
 #avatar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+}
+
+#avatar p {
+  white-space: nowrap;
 }
 
 #avatar img {
   width: 50px;
   height: auto;
-  margin: 10%;
+  margin: 12px;
+  margin-left: 0%;
 }
 
 #tweet-text {
   margin-top: 0px;
   padding: 0% 3% 0% 3%;
+  word-wrap: break-word;
 }
 
 article hr {
@@ -35,6 +45,7 @@ article hr {
 article header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0% 3% 0% 3%;
 }
 
