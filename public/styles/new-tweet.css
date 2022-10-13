@@ -9,16 +9,11 @@ textarea {
   resize: none;
   outline: none;
   font-size: 30px;
-  font-weight: bold;
   width: 100%;
-  height: 60px;
-}
-
-#humming {
+  height: 80px;
   background-color: transparent;
   border-width: 0px 0px 4px 0px;
   border-color: #545149;
-  font-weight: bold;
 }
 
 .below-border {

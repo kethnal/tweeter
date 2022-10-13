@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('#tweet-text').on('input', function() {
+  $('#humming').on('input', function() {
 
     let totalChar = 140 - $(this).val().length;
     const $target = $(this).next().children().last();

@@ -4,6 +4,22 @@ article {
   margin-bottom: 30px;
 }
 
+article header p {
+  color: #9AA8DA;
+}
+
+#avatar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#avatar img {
+  width: 50px;
+  height: auto;
+  margin: 10%;
+}
+
 #tweet-text {
   margin-top: 0px;
   padding: 0% 3% 0% 3%;
@@ -47,4 +63,8 @@ article footer {
 
 .hover-icon {
   color: darkorange;
+}
+
+.hover-handle {
+  font-weight: bold;
 }
