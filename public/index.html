@@ -53,7 +53,7 @@
       <section class="new-tweet">
         <form  method="POST" action="/tweets/">
 
-          <textarea id="tweet-text" name="text" placeholder="What are you humming about?"></textarea>
+          <textarea id="humming" name="text" placeholder="What are you humming about?"></textarea>
       
           <footer class="below-border">
             <button type="submit" class="send-tweet">Tweet</button>
@@ -62,29 +62,27 @@
 
         </form>
       </section>
+      
+      <article >
 
-      <section>
-        <article class="some-tweet">
+        <header>
+          <p>some icon</p>
+          <p>@handle</p>
+        </header>
 
-          <header>
-            <p>some icon</p>
-            <p>@handle</p>
-          </header>
+        <p id="tweet-text">this is a quirky relatable tweet about something that happened at panera bread</p>
+        <hr class="solid">
 
-          <p>this is a quirky relatable tweet about something that happened at panera bread</p>
-          <hr class="solid">
+        <footer>
+          <p>2 hours ago</p>
+          <div id="icons">
+            <div class="icon"><i class="fa-solid fa-flag"></i></div>
+            <div class="icon"><i class="fa-solid fa-retweet"></i></div>
+            <div class="icon"><i class="fa-solid fa-heart"></i></div>
+          </div>
+        </footer>
 
-          <footer>
-            <p>2 hours ago</p>
-            <div>
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </footer>
-
-        </article>
-      </section>
+      </article>
 
     </main>
   </body>

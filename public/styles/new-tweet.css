@@ -14,9 +14,10 @@ textarea {
   height: 60px;
 }
 
-#tweet-text {
+#humming {
   background-color: transparent;
-  border-width: 0px 0px 3px 0px;
+  border-width: 0px 0px 4px 0px;
+  border-color: #545149;
   font-weight: bold;
 }
 
