@@ -64,14 +64,19 @@ article footer {
   padding: 7%;
 }
 
-.hover-art {
+article:hover {
   box-shadow: 7px 7px #9AA8DA;
 }
 
-.hover-icon {
+article:hover .name {
+  font-weight: bold;
+}
+
+.icon:hover {
   color: darkorange;
 }
 
-.hover-handle {
+.name:hover {
   font-weight: bold;
 }
+

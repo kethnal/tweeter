@@ -26,9 +26,9 @@ $(document).ready(function() {
       <header>
         <div class="avatar">
           <img src="${user.avatars}">
-          <p>${user.name}</p>
+          <p class="name">${user.name}</p>
         </div>
-        <p>${user.handle}</p>
+        <p class="name">${user.handle}</p>
       </header>
   
       <div class="tweet-text">${safeHTML}</div>
