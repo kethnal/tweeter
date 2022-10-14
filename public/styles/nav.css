@@ -29,6 +29,11 @@ nav {
   text-decoration: none;
 }
 
+#desktop, #desktop:visited, #desktop:hover, #desktop:active {
+  color: inherit;
+  text-decoration: none;
+}
+
 nav p {
   margin-bottom: 15px;
   position: relative;
@@ -47,7 +52,6 @@ nav p {
     display: flex;
     align-items: center;
     font-size: 40px;
-    color: inherit;
+    color: #545149;
   }
-
 }

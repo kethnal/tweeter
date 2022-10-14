@@ -8,13 +8,16 @@ $(document).ready(function() {
 
   $('.error').hide();
 
+
   const createTweetElement = function(tweet) {
-  
+
     const user = tweet.user;
   
     const escape = function (str) {
+
       let div = document.createElement("div");
       div.appendChild(document.createTextNode(str));
+
       return div.innerHTML;
     };
   
@@ -51,20 +54,24 @@ $(document).ready(function() {
   
   
   const renderTweets = function(tweetsArr) {
+
     $('#tweet-container').empty();
 
     for (let tweet of tweetsArr) {
       let newTweet = createTweetElement(tweet);
       $('#tweet-container').prepend(newTweet);
     }
+
   };
 
 
   const loadTweets = function() {
+
     $.ajax({
       method: 'GET',
       url: '/tweets',
     }).then(renderTweets);
+
   };
 
 
@@ -72,10 +79,13 @@ $(document).ready(function() {
 
 
   $('#tweet-input').on('submit', function(event) {
+
     event.preventDefault();
 
     const $dataToSendToServer = $(this).serialize();
+
     let $input = $(this).children().first().val();
+
     $('.error').slideUp();
 
     if ($input.length > 140) {
@@ -91,8 +101,11 @@ $(document).ready(function() {
       data: $dataToSendToServer
     }).then(loadTweets);
 
+    let $resetCount = $(this).children().last().children().last();
+    $resetCount.text(140);
+
     this.reset();
+
   });
   
-
 });

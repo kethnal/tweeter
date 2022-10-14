@@ -5,7 +5,7 @@
   text-align: center;
   background-color: darkorange;
   background-image: url("../images/cubes.png");
-  height: 500px;
+  height: 480px;
   width: 100%;
   margin-top: 0%;
   padding-left: 10%;
@@ -13,6 +13,7 @@
 }
 
 #current-user p {
+  display: flex;
   margin: 0px;
   font-size: 50px;
 }
@@ -36,7 +37,7 @@
 
 @media only screen and (max-width: 420px) {
   #current-user {
-    height: 28vh;
+    height: 200px;
   }
 
   #current-user img {
@@ -46,6 +47,5 @@
 
   #current-user p {
     margin-bottom: 10%;
-    align-items: flex-end;
   }
 }
