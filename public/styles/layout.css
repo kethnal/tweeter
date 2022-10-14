@@ -33,10 +33,6 @@ main {
   margin-right: 5%;
 }
 
-#tweet-container {
-  width: 80%;
-}
-
 @media only screen and (min-width: 1024px) {
   #content {
     display: flex;
