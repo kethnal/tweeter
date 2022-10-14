@@ -33,3 +33,19 @@
     border-radius: 10px 40px;
   }
 }
+
+@media only screen and (max-width: 420px) {
+  #current-user {
+    height: 28vh;
+  }
+
+  #current-user img {
+    display: none;
+    justify-content: center;
+  }
+
+  #current-user p {
+    margin-bottom: 10%;
+    align-items: flex-end;
+  }
+}

@@ -26,10 +26,12 @@ nav {
 
 #smartphone {
   display: none;
+  text-decoration: none;
 }
 
 nav p {
-  margin-bottom: 15px
+  margin-bottom: 15px;
+  position: relative;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -41,10 +43,11 @@ nav p {
     display: none;
   }
 
-  #smartphone {
+  #smartphone, #smartphone:visited, #smartphone:hover, #smartphone:active {
     display: flex;
     align-items: center;
     font-size: 40px;
+    color: inherit;
   }
 
 }
