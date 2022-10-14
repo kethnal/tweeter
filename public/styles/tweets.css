@@ -6,16 +6,13 @@ article {
 
 article header {
   color: #9AA8DA;
+  word-break: break-all;
 }
 
 .avatar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.avatar p {
-  white-space: nowrap;
 }
 
 .avatar img {
@@ -28,7 +25,7 @@ article header {
 .tweet-text {
   margin-top: 0px;
   padding: 0% 3% 0% 3%;
-  word-wrap: break-word;
+  word-break: break-all;
 }
 
 article hr {
