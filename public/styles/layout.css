@@ -33,3 +33,19 @@ main {
   margin-right: 5%;
 }
 
+#tweet-container {
+  width: 80%;
+}
+
+@media only screen and (min-width: 1024px) {
+  #content {
+    display: flex;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  main {
+    margin-top: 120px;
+    margin-right: 0px;
+  }
+}

@@ -37,44 +37,47 @@
     <nav>
       <span id="name">tweeter</span>
       <div id="tweet-header">
-        <p class="write"><strong>Write</strong> a new tweet</p>
+        <p><strong>Write</strong> a new tweet</p>
         <i class="fa-solid fa-angles-down fa-bounce"></i>
       </div>
       <div id="smartphone"><i class="fa-solid fa-circle-plus fa-beat"></i></div>
     </nav>
 
-    <header class="current-user">
-      <div class="user">
-          <img src="/images/profile-hex.png"> 
-        <br>
-          <p class="user-title"><strong>Chronically</strong> Online</p>
-      </div>  
-    </header>
+    <div id="content">
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+      <header id="current-user">
+        <div>
+            <img src="/images/profile-hex.png"> 
+          <br>
+            <p><strong>Chronically</strong> Online</p>
+        </div>  
+      </header>
 
-      <p class="error" id="empty">Humming about nothing? I don't think so.</p>
-      <p class="error" id="length">No one wants to read all that...</p>
+        <!-- Page-specific (main) content here -->
+        <main>
 
+          <p class="error" id="empty">Humming about nothing? I don't think so.</p>
+          <p class="error" id="length">No one wants to read all that...</p>
 
-      <section class="new-tweet">
-        <form id="tweet-input">
+          <section class="new-tweet">
+            <form id="tweet-input">
 
-          <textarea id="humming" name="text" placeholder="What are you humming about?"></textarea>
-      
-          <footer class="below-border">
-            <button type="submit" class="send-tweet">Tweet</button>
-            <output name="counter" class="counter" for="humming">140</output>
-          </footer>
+              <textarea id="humming" name="text" placeholder="What are you humming about?"></textarea>
+          
+            <footer>
+              <button type="submit" id="send-tweet">Tweet</button>
+              <output name="counter" class="counter" for="humming">140</output>
+            </footer>
 
-        </form>
+            </form>
+          </section>
 
-      </section>
+          <section id="tweet-container">
 
-      <section id="tweet-container">
-      </section>
+          </section>
 
-    </main>
+      </main>
+
+    </div>
   </body>
 </html>

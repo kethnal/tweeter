@@ -1,23 +1,35 @@
-.current-user {
+#current-user {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
   color: #FFFFFF;
+  text-align: center;
   background-color: darkorange;
   background-image: url("../images/cubes.png");
-  height: 520px;
+  height: 500px;
   width: 100%;
+  margin-top: 0%;
+  padding-left: 10%;
+  padding-right: 10%;
 }
 
-.user-title {
+#current-user p {
   margin: 0px;
   font-size: 50px;
 }
 
-.user {
+#current-user div {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
+}
+
+@media only screen and (min-width: 1024px) {
+  #current-user {
+    align-items: center;
+    margin-top: 200px;
+    width: 35%;
+    height: 570px;
+    border-radius: 10px 40px;
+  }
 }

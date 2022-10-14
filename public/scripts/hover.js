@@ -9,6 +9,7 @@ $(document).ready(function() {
     $(this).addClass('hover-art');
   });
 
+
   $('article').on('mouseleave', function() {
 
     const $target = $(this).children().first();
@@ -18,10 +19,12 @@ $(document).ready(function() {
     $(this).removeClass('hover-art');
   });
 
+
   $('.icon').on('mouseover', function() {
     $(this).addClass('hover-icon');
   });
 
+  
   $('.icon').on('mouseleave', function() {
     $(this).removeClass('hover-icon');
   });

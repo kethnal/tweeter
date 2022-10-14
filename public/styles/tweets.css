@@ -1,35 +1,31 @@
-#tweet-container {
-  width: 80%;
-}
-
 article {
   border: 4px solid;
   padding: 20px;
   margin-bottom: 30px;
 }
 
-article header p {
+article header {
   color: #9AA8DA;
 }
 
-#avatar {
+.avatar {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#avatar p {
+.avatar p {
   white-space: nowrap;
 }
 
-#avatar img {
+.avatar img {
   width: 50px;
   height: auto;
   margin: 12px;
   margin-left: 0%;
 }
 
-#tweet-text {
+.tweet-text {
   margin-top: 0px;
   padding: 0% 3% 0% 3%;
   word-wrap: break-word;
@@ -57,14 +53,14 @@ article footer {
   padding: 0% 3% 0% 3%;
 }
 
-#icons {
+.icons {
   display: flex;
   flex-direction: row;
   justify-content: center;
   color: #4056A1;
 }
 
-#icons .icon {
+.icons .icon {
   padding: 7%;
 }
 

@@ -16,7 +16,7 @@ textarea {
   border-color: #545149;
 }
 
-.below-border {
+.new-tweet footer {
   font-family: 'Bungee', cursive;
   font-size: 25px;
   display: flex;
@@ -25,7 +25,7 @@ textarea {
   margin: 20px 0px 20px 0px
 }
 
-.send-tweet {
+#send-tweet {
   color: #FFFFFF;
   background-color: #4056A1;
   border: 0px;

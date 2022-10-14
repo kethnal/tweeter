@@ -24,19 +24,19 @@ $(document).ready(function() {
     <article>
   
       <header>
-        <div id="avatar">
+        <div class="avatar">
           <img src="${user.avatars}">
           <p>${user.name}</p>
         </div>
         <p>${user.handle}</p>
       </header>
   
-      <div id="tweet-text">${safeHTML}</div>
+      <div class="tweet-text">${safeHTML}</div>
       <hr class="solid">
   
       <footer>
         <p>${timeago.format(tweet.created_at)}</p>
-        <div id="icons">
+        <div class="icons">
           <div class="icon"><i class="fa-solid fa-flag"></i></div>
           <div class="icon"><i class="fa-solid fa-retweet"></i></div>
           <div class="icon"><i class="fa-solid fa-heart"></i></div>
@@ -50,8 +50,10 @@ $(document).ready(function() {
   };
   
   
-  const renderTweets = function(tweets) {
-    for (let tweet of tweets) {
+  const renderTweets = function(tweetsArr) {
+    $('#tweet-container').empty();
+
+    for (let tweet of tweetsArr) {
       let newTweet = createTweetElement(tweet);
       $('#tweet-container').prepend(newTweet);
     }
@@ -89,7 +91,6 @@ $(document).ready(function() {
       data: $dataToSendToServer
     }).then(loadTweets);
 
-    console.log()
     this.reset();
   });
   
